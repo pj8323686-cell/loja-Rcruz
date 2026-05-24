@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R Cruz Eletrônicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container nav">
+      <h1>R Cruz Eletrônicos</h1>
+
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <a href="https://www.instagram.com/rcruz.modas" target="_blank" class="instagram-btn">
+            Instagram
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="banner-area">
+        <img src="banner.jpg.jpeg" alt="Banner Loja Rcruz">
+      </div>
+
+      <div class="hero-texto">
+        <h2>Os melhores eletrônicos estão aqui</h2>
+        <p>Compre com praticidade, segurança e finalize seu pedido direto no WhatsApp.</p>
+
+        <div class="botoes-hero">
+          <a href="#produtos" class="btn azul">Ver produtos</a>
+          <a
+            href="https://wa.me/5512981880220?text=Olá,%20vim%20pelo%20site%20da%20R%20Cruz%20Eletrônicos"
+            target="_blank"
+            class="btn verde"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos" class="produtos">
+    <div class="container">
+      <h2 class="titulo-secao">Produtos</h2>
+
+      <div class="grid-produtos">
+        <div class="card">
+          <img src="produto-1.jpg" alt="Fone Bluetooth">
+          <h3>Fone Bluetooth</h3>
+          <p>Som de qualidade e ótima bateria para o dia a dia.</p>
+          <span class="preco">R$ 89,90</span>
+
+          <div class="acoes-produto">
+            <button class="btn azul" onclick="adicionarAoCarrinho('Fone Bluetooth', 89.90)">
+              Adicionar ao carrinho
+            </button>
+
+            <a
+              href="https://wa.me/5512981880220?text=Olá,%20tenho%20interesse%20no%20Fone%20Bluetooth"
+              target="_blank"
+              class="btn verde"
+            >
+              Comprar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="produto-2.jpg" alt="Smartwatch">
+          <h3>Smartwatch</h3>
+          <p>Design moderno e praticidade para sua rotina.</p>
+          <span class="preco">R$ 149,90</span>
+
+          <div class="acoes-produto">
+            <button class="btn azul" onclick="adicionarAoCarrinho('Smartwatch', 149.90)">
+              Adicionar ao carrinho
+            </button>
+
+            <a
+              href="https://wa.me/5512981880220?text=Olá,%20tenho%20interesse%20no%20Smartwatch"
+              target="_blank"
+              class="btn verde"
+            >
+              Comprar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="produto-3.jpg" alt="Caixa de Som">
+          <h3>Caixa de Som</h3>
+          <p>Som potente para qualquer ambiente.</p>
+          <span class="preco">R$ 119,90</span>
+
+          <div class="acoes-produto">
+            <button class="btn azul" onclick="adicionarAoCarrinho('Caixa de Som', 119.90)">
+              Adicionar ao carrinho
+            </button>
+
+            <a
+              href="https://wa.me/5512981880220?text=Olá,%20tenho%20interesse%20na%20Caixa%20de%20Som"
+              target="_blank"
+              class="btn verde"
+            >
+              Comprar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="produto-4.jpg" alt="Carregador Turbo">
+          <h3>Carregador Turbo</h3>
+          <p>Carregamento rápido e seguro para seus aparelhos.</p>
+          <span class="preco">R$ 59,90</span>
+
+          <div class="acoes-produto">
+            <button class="btn azul" onclick="adicionarAoCarrinho('Carregador Turbo', 59.90)">
+              Adicionar ao carrinho
+            </button>
+
+            <a
+              href="https://wa.me/5512981880220?text=Olá,%20tenho%20interesse%20no%20Carregador%20Turbo"
+              target="_blank"
+              class="btn verde"
+            >
+              Comprar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="container">
+      <h2 class="titulo-secao">Contato</h2>
+
+      <div class="box-contato">
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/5512981880220" target="_blank">(12) 98188-0220</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/rcruz.modas" target="_blank">@rcruz.modas</a></p>
+        <p><strong>Endereço:</strong> Av. Marginal, 2220 - Perequê-Mirim, Ubatuba - SP, 11686-496</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>R Cruz Eletrônicos - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <button class="carrinho-flutuante" onclick="alternarCarrinho()" aria-label="Abrir carrinho">
+    🛒 <span id="contador-carrinho">0</span>
+  </button>
+
+  <div class="overlay-carrinho" id="overlay-carrinho" onclick="fecharCarrinho()"></div>
+
+  <aside class="janela-carrinho" id="janela-carrinho">
+    <div class="topo-carrinho">
+      <h3>Seu Carrinho</h3>
+      <button class="fechar-carrinho" onclick="fecharCarrinho()">✕</button>
+    </div>
+
+    <div class="corpo-carrinho">
+      <p class="itens-info">Itens: <span id="quantidade-itens">0</span></p>
+      <ul id="lista-carrinho" class="lista-carrinho"></ul>
+    </div>
+
+    <div class="rodape-carrinho">
+      <p><strong>Total:</strong> <span id="total-carrinho">R$ 0,00</span></p>
+
+      <div class="acoes-carrinho">
+        <button class="btn limpar" onclick="limparCarrinho()">Limpar carrinho</button>
+        <button class="btn verde" onclick="finalizarPedido()">Finalizar no WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+
+  <a
+    href="https://wa.me/5512981880220?text=Olá,%20vim%20pelo%20site%20da%20R%20Cruz%20Eletrônicos"
+    class="whatsapp-fixo"
+    target="_blank"
+  >
+    <span class="icone-wpp">💬</span>
+    <span class="texto-wpp">Falar no WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
